@@ -1,0 +1,132 @@
+# --------------------------------------------------------------------------- #
+# Proofscape Doc Modules                                                      #
+# Copyright (c) 2018-2022 Alpine Mathematics contributors                     #
+#                                                                             #
+# This Source Code Form is subject to the terms of the Mozilla Public         #
+# License, v. 2.0. If a copy of the MPL was not distributed with this         #
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
+# --------------------------------------------------------------------------- #
+
+from gh.alpinemath.ex.G.auss.DA.Sec7 import Art343
+from gh.alpinemath.histarch.H.ilbert.ZB import Thm117
+
+anno examplorers @@@
+
+# Example Explorers
+
+An _example explorer_ (or "examplorer") is a set of widgets in a Proofscape
+annotation, designed to help the user rapidly explore numerical examples of
+mathematical ideas and objects.
+
+Even examplorers themselves are best explained by example, so let's take
+a look at a few.
+
+## Scenario 1
+
+Suppose you're learning the theory of cyclotomic fields, and you've decided to
+go back to the subject's roots, by studying Section VII of Gauss's
+_Disquisitiones Arithmeticae_. You come to Article 343, where Gauss introduces
+the _periods_.
+
+It's not important for this discussion if you know exactly what periods are, but,
+roughly, when we're in the $n$th cyclotomic field, $n$ an odd prime, we need
+to pick a primitive residue $g$ mod $n$ (a number whose powers generate all the
+nonzero residues mod $n$) in order to form the periods.
+
+In Article 343, Gauss proves that the choice of generator $g$ (there are always
+multiple candidates) is not important; you get the same periods.
+And at the end of the article, Gauss offers us one example of what
+the periods look like, when $n = 19$ and $g = 2$.
+
+After studying the article, you might think to yourself, "Okay, I see the basic idea,
+but still, I'd like to get a better feel for these things by exploring more examples."
+
+### Loading an explorer
+
+With the goal in mind of studying more exmaples, let's say you go into PISE and
+open up the `gh.alpinemath.ex` repo (which
+is the Alpine Math "Expansions and Example Explorers" library).
+There you look under `Gauss`,
+`DA`, and find `Art343`. It seems someone has already coded an example explorer
+for this article. Great! (If they hadn't, you would be welcome to code one
+yourself, and contribute it to the repo.)
+
+<link:w1>[Loading the explorer]{
+    ref: Art343.eg1,
+    tab: "other",
+} (please click the link if you haven't already!), you see that the default
+values of $n = 19$ and $g = 2$ have been set as in Gauss's article.
+You might now scroll through the explorer, where you see that there are
+five _parameters_ (yellow boxes), $n$, $g$, $G$, $e$, and $@lam$, and that a
+single _display_ (blue box) comes at the end.
+
+You can immediately begin exploring different examples, by choosing different
+values for the parameters. For example, you might change $e$ from $3$ to $6$,
+and watch the display update as expected.
+
+Looking more closely, you see that the specific purpose of this examplorer is
+to flesh out Gauss's proof that the periods are independent of the choice of
+generator. In Gauss's proof, he used capital $G$ as a supposed second generator,
+so the examplorer follows suit and now lets you dial in example values for $G$.
+In the display below, you're able to confirm that indeed you get the same
+periods, whether using $g$ or $G$ as generator. They may appear in a different
+order, and the terms within each period too may be in a different order, but
+you realize that this is all just part of the beauty of what's going on
+underneath the theorem.
+
+### Comparing side by side
+
+However, as you try different values for $G$, you might find it's hard to keep
+track of what changed in the display. No problem.
+Right-click the tab at the top of the examplorer
+window, and find "Open in Opposite Group." When you click that, you're going to
+cover up these notes, but you can find them again by selecting their tab.
+
+Now that you have two copies of the example explorer side by side, you can again
+try changing a single parameter (say, $G$), and then compare the displays,
+to see what difference the parameter made.
+
+
+## Scenario 2
+
+Let's say you're still studying cyclotomic fields, but this time you want to
+see how they were being treated by century's end, this time in Hilbert's
+*Zahlbericht*. You've come to
+Theorem 117, which establishes the factorization of odd prime $ell@$ in the
+$ell eth@$ cyclotomic field $k$, and are <chart:w2>[studying the proof]{
+    "view": Thm117.Pf,
+}. (Please click the link!)
+
+When you reach <chart:w3>[this step]{
+    "view": Thm117.Pf.A8,
+} (after you click, the step is highlighted in blue), you might think,
+"Well, the idea being used in this step of the proof is quite clever.
+I'd like to hash this out in
+a few numerical cases. I wonder if anyone's written an explorer."
+
+This time, you can right-click the node (the box highlighted in blue, where
+the step occurs) to open its context menu. At the bottom of the context menu
+you see that indeed there's an item that says "Notes:" (and then a library path),
+indicating that someone has written something about this node. Go ahead and
+click the "Notes:" item now.
+
+Sure enough, you find a discussion about the clever substitution
+$zeta mapsto zeta^{g g'}@$ that happens on this node, along with an example
+explorer of two parameters and one display. You can dial in a few different
+parameter values, and watch the display update. It's probably just confirming what
+you already saw in your head when you came to this step of the proof, but
+nevertheless it's nice to see it spelled out before your eyes, with some
+actual numbers in it. When you're satisfied, you can close the explorer, and
+return to the proof.
+
+
+## Conclusions
+
+This has been a brief introduction to example explorers in Proofscape.
+Hopefully now you see what they are, what purpose they serve, and how they
+can be linked to steps in proofs.
+
+In the "Syntax" chapter of these docs, you can learn about how to code example
+explorers in your own annotations.
+
+@@@
