@@ -7,8 +7,11 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.                    #
 # --------------------------------------------------------------------------- #
 
+from gh.alpinemath.histarch.H.ilbert.ZB import Thm117, Thm90
+
 from gh.alpinemath.ex.G.auss.DA.Sec7 import Art343
-from gh.alpinemath.histarch.H.ilbert.ZB import Thm117
+from gh.alpinemath.ex.H.ilbert.ZB.Thm90 import X2 as Thm90_X2
+
 
 anno examplorers @@@
 
