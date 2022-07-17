@@ -125,11 +125,19 @@ return to the proof.
 
 ## Conclusions
 
-This has been a brief introduction to example explorers in Proofscape.
+This has been a brief introduction to *example explorers* in Proofscape.
 Hopefully now you see what they are, what purpose they serve, and how they
 can be linked to steps in proofs.
 
-In the "Syntax" chapter of these docs, you can learn about how to code example
-explorers in your own annotations.
+In the "Syntax" chapter of these docs (coming soon!), you can learn about how
+to code example explorers in your own annotations.
+Or you can start right now by
+<link:w4>[opening one of the examplorers back up]{
+    ref: Art343.eg1,
+    tab: "other",
+}, right-clicking one of the parameter or display widgets (yellow or blue boxes),
+and selecting "View source." If you like learning by example,
+you can probably go pretty far just by examining the syntax that defines this
+explorer.
 
 @@@
